@@ -37,11 +37,8 @@ export default Category;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#000000",
     padding: 5,
     flexDirection: "row",
-
-
   },
   catContainer: {
     padding: 10,

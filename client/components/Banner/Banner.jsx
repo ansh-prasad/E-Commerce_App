@@ -52,12 +52,13 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   cardWrapper: {
-    borderRadius: 8,
     overflow: "hidden",
+    borderRadius: 8,
   },
   card: {
     width: width * 0.9,
     height: width * 0.4,
+    
   },
   cornerLabel: {
     position: "absolute",
@@ -65,6 +66,7 @@ const styles = StyleSheet.create({
     right: 0,
     borderTopLeftRadius: 8,
     opacity: 0,
+    
   },
   cornerLabelText: {
     fontSize: 12,

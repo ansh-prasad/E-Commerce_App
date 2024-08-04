@@ -4,21 +4,16 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "./screens/Home";
 import About from "./screens/About";
+import ProductDetails from "./screens/ProductDetails";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <NavigationContainer
-      theme={{
-        colors: {
-          background: "#000000", 
-        },
-      }}
-    >
+    <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          contentStyle: { backgroundColor: "#000000" }, 
+          contentStyle: { backgroundColor: "#000000" },
         }}
       >
         <Stack.Screen
@@ -28,6 +23,7 @@ export default function App() {
             headerShown: false,
           }}
         />
+        <Stack.Screen name="productDetails" component={ProductDetails} />
         <Stack.Screen name="about" component={About} />
       </Stack.Navigator>
     </NavigationContainer>
