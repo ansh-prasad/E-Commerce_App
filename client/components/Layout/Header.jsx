@@ -40,10 +40,13 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#000000",
     paddingTop: 30,
     paddingHorizontal: 16,
     paddingBottom: 20,
+    borderBottomColor: "#D7D7D7",
+    borderBottomWidth: 0.5,
+    borderBottomLeftRadius:20,
+    borderBottomRightRadius:20
   },
   searchContainer: {
     flexDirection: "row",

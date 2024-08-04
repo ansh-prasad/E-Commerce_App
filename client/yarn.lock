@@ -5720,6 +5720,11 @@ react-native-vector-icons@^10.1.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
+react-native-x-carousel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/react-native-x-carousel/-/react-native-x-carousel-1.0.1.tgz"
+  integrity sha512-HioYKgsW7RS6EZzVlcLK0PUn/2gk1EF1gv1fCydEEBiGnYjxhtuG+ZKphE2Y4VKRIV4OqgSi3uwPUo1wcR3dvQ==
+
 react-native@*, react-native@0.74.3:
   version "0.74.3"
   resolved "https://registry.npmjs.org/react-native/-/react-native-0.74.3.tgz"

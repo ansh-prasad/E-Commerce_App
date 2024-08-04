@@ -7,7 +7,7 @@ import {
   ScrollView,
 } from "react-native";
 import { categoriesData } from "../../Data/CategoriesData";
-import Icon from "react-native-vector-icons/FontAwesome";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useNavigation } from "@react-navigation/native";
 
 const Category = () => {
@@ -40,10 +40,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#000000",
     padding: 5,
     flexDirection: "row",
-    borderTopColor: "#D7D7D7",
-    borderTopWidth: 0.5,
-    borderBottomColor: "#D7D7D7",
-    borderBottomWidth: 0.5,
+
+
   },
   catContainer: {
     padding: 10,
