@@ -45,8 +45,8 @@ const styles = StyleSheet.create({
     paddingBottom: 20,
     borderBottomColor: "#D7D7D7",
     borderBottomWidth: 0.5,
-    borderBottomLeftRadius:20,
-    borderBottomRightRadius:20
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
   },
   searchContainer: {
     flexDirection: "row",
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   searchContainerIcon: {
     margin: 5,
-    backgroundColor: "#FEFE72",
+    backgroundColor: "#FFDC20",
     height: 40,
     width: 80,
     borderRadius: 17,

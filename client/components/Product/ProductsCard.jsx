@@ -20,13 +20,11 @@ const ProductsCard = ({ p }) => {
 
   return (
     <TouchableOpacity style={styles.card} onPress={() => handleBtn(p._id)}>
-      <View style={styles.imageContainer}>
-        <Image
-          source={{ uri: p?.imageUrl }}
-          style={styles.cardImg}
-          resizeMode="contain"
-        />
-      </View>
+      <Image
+        source={{ uri: p?.imageUrl }}
+        style={styles.cardImg}
+        resizeMode="cover"
+      />
       <Text style={styles.cardTitle}>{p?.name}</Text>
       <View style={styles.priceButtonContainer}>
         <Text style={styles.cardPrice}>
@@ -59,22 +57,16 @@ const styles = StyleSheet.create({
     position: "relative",
     borderRadius: 20,
   },
-  imageContainer: {
+  cardImg: {
     width: "100%",
     height: 120,
     marginBottom: 10,
     borderRadius: 18,
-    overflow: "hidden",
-    backgroundColor: "#fff", 
-  },
-  cardImg: {
-    width: "100%",
-    height: "100%",
   },
   cardTitle: {
     color: "#EBEBEB",
-    fontSize: 15,
-    fontWeight: "600",
+    fontSize: 16,
+    fontWeight: "bold",
     marginBottom: 5,
   },
   priceButtonContainer: {
@@ -85,24 +77,26 @@ const styles = StyleSheet.create({
   },
   cardPrice: {
     color: "#ffffff",
-    fontSize: 15,
+    fontSize: 17,
+    fontWeight: "bold",
+    marginLeft: 5,
   },
   Btn: {
     backgroundColor: "#FFD700",
-    height: 30,
-    width: 30,
+    height: 35,
+    width: 35,
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
+    marginRight: 5,
   },
   catIcon: {
-    fontSize: 18,
+    fontSize: 20,
   },
   messageContainer: {
     position: "absolute",
-    bottom: 30,
     left: "50%",
-    transform: [{ translateX: -45 }],
+    transform: [{ translateX: -50 }],
     backgroundColor: "rgba(0,0,0,0.8)",
     padding: 15,
     borderRadius: 20,
