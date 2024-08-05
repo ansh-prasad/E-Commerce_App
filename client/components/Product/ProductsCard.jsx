@@ -20,11 +20,13 @@ const ProductsCard = ({ p }) => {
 
   return (
     <TouchableOpacity style={styles.card} onPress={() => handleBtn(p._id)}>
-      <Image
-        source={{ uri: p?.imageUrl }}
-        style={styles.cardImg}
-        resizeMode="cover"
-      />
+      <View style={styles.imgContainer}>
+        <Image
+          source={{ uri: p?.imageUrl }}
+          style={styles.cardImg}
+          resizeMode="cover"
+        />
+      </View>
       <Text style={styles.cardTitle}>{p?.name}</Text>
       <View style={styles.priceButtonContainer}>
         <Text style={styles.cardPrice}>
@@ -58,9 +60,8 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   cardImg: {
-    width: "100%",
-    height: 120,
-    marginBottom: 10,
+    height: "100%",
+
     borderRadius: 18,
   },
   cardTitle: {
@@ -104,6 +105,14 @@ const styles = StyleSheet.create({
   messageText: {
     color: "#ffffff",
     fontSize: 14,
+  },
+  imgContainer: {
+    height: 120,
+    width: "100%",
+    padding: 10,
+    backgroundColor: "white",
+    marginBottom: 10,
+    borderRadius: 20,
   },
 });
 

@@ -7,7 +7,8 @@ export const ProductsData = [
     price: 900,
     quantity: 30,
     category: "mobile",
-    imageUrl: "https://m.media-amazon.com/images/I/71bErtQPC3L._SL1500_.jpg",
+    imageUrl:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-compare-iphone-15-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1692827832423",
   },
   {
     _id: 2,
@@ -17,7 +18,7 @@ export const ProductsData = [
     price: 900,
     quantity: 30,
     category: "mobile",
-    imageUrl: "https://m.media-amazon.com/images/I/71bErtQPC3L._SL1500_.jpg",
+    imageUrl:
+      "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/iphone-compare-iphone-15-pro-202309?wid=384&hei=512&fmt=jpeg&qlt=90&.v=1692827834790",
   },
-  
 ];

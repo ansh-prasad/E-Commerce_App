@@ -9,9 +9,8 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ProductsData } from "../Data/ProductsData";
-import Layout from "../components/Layout/Layout";
 
-const ProductDetails = ({ route }) => {
+const ProductDetails = ({ route, navigation }) => {
   const [pDetails, setPDetails] = useState({});
   const [qty, setQty] = useState(1);
   const [alertMsg, setAlertMsg] = useState("");
@@ -24,6 +23,16 @@ const ProductDetails = ({ route }) => {
     });
     setPDetails(getProduct);
   }, [params?._id]);
+
+  useEffect(() => {
+    navigation.setOptions({
+      headerTitle: "Product Details",
+      headerStyle: {
+        backgroundColor: "#000",
+      },
+      headerTintColor: "#fff",
+    });
+  }, [navigation]);
 
   const handleAddQty = () => {
     if (qty === 5) {
@@ -156,18 +165,20 @@ const styles = StyleSheet.create({
   qtyContainer: {
     flexDirection: "row",
     alignItems: "center",
+    justifyContent:"center"
   },
   btnQty: {
     backgroundColor: "#FFE34C",
-    width: 40,
-    height: 40,
+    width: 45,
+    height: 45,
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: 20,
+    borderRadius: 50,
   },
   btnQtyText: {
     fontSize: 25,
     color: "black",
+
   },
   qtyText: {
     fontSize: 18,
@@ -190,7 +201,7 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: "30%",
     left: "20%",
-    right: "20%", 
+    right: "20%",
     backgroundColor: "rgba(0,0,0,0.8)",
     padding: 15,
     borderRadius: 20,
