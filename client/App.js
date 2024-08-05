@@ -13,7 +13,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
-          contentStyle: { backgroundColor: "#000000" },
+          contentStyle: { backgroundColor: "#fff" },
         }}
       >
         <Stack.Screen
