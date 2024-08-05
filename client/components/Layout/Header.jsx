@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
   },
   searchContainerIcon: {
     margin: 5,
-    backgroundColor: "#FFDC20",
+    backgroundColor: "#FFE34C",
     height: 40,
     width: 80,
     borderRadius: 17,

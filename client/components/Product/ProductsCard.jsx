@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
   },
   Btn: {
-    backgroundColor: "#FFD700",
+    backgroundColor: "#FFE34C",
     height: 35,
     width: 35,
     borderRadius: 15,

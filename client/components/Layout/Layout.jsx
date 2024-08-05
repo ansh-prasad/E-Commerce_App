@@ -24,13 +24,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-end",
     zIndex: 100,
-    borderWidth: 1,
+    // borderWidth: 1,
+    // borderColor: "#232323",
     position: "absolute",
     bottom: 0,
     padding: 10,
-    borderColor: "#111111",
-    borderTopLeftRadius: 20,
-    borderTopRightRadius: 20,
+    backgroundColor: "#232323",
+    borderTopLeftRadius: 40,
+    borderTopRightRadius: 40,
 
 
   }

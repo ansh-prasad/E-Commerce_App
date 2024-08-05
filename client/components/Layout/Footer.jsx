@@ -12,21 +12,30 @@ const Footer = () => {
         style={[styles.menuContainer, route.name == "home" && styles.active]}
         onPress={() => alert("Home")}
       >
-        <Icon name="home-outline" style={styles.icon} />
+        <Icon
+          name="home-outline"
+          style={[styles.icon, route.name == "home" && styles.activeicon]}
+        />
         {/* <Text style={styles.iconText}>Home</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.menuContainer, route.name == "Cart" && styles.active]}
         onPress={() => alert("Cart")}
       >
-        <Icon name="cart-outline" style={styles.icon} />
+        <Icon
+          name="cart-outline"
+          style={[styles.icon, route.name == "Cart" && styles.activeicon]}
+        />
         {/* <Text style={styles.iconText}>Cart</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.menuContainer, route.name == "Account" && styles.active]}
         onPress={() => alert("Account")}
       >
-        <Icon name="account-circle-outline" style={styles.icon} />
+        <Icon
+          name="account-circle-outline"
+          style={[styles.icon, route.name == "Account" && styles.activeicon]}
+        />
         {/* <Text style={styles.iconText}>Account</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
@@ -36,14 +45,23 @@ const Footer = () => {
         ]}
         onPress={() => alert("Notification")}
       >
-        <Icon name="bell-outline" style={styles.icon} />
+        <Icon
+          name="bell-outline"
+          style={[
+            styles.icon,
+            route.name == "Notification" && styles.activeicon,
+          ]}
+        />
         {/* <Text style={styles.iconText}>Notification</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.menuContainer, route.name == "logout" && styles.active]}
         onPress={() => alert("logout")}
       >
-        <Icon name="logout" style={styles.icon} />
+        <Icon
+          name="logout"
+          style={[styles.icon, route.name == "logout" && styles.activeicon]}
+        />
         {/* <Text style={styles.iconText}>Home</Text> */}
       </TouchableOpacity>
     </View>
@@ -62,17 +80,20 @@ const styles = StyleSheet.create({
   },
   icon: {
     fontSize: 28,
-    color: "#000000",
+    color: "#ECECEC",
   },
   // iconText: {
   //   color: "#000000",
   //   fontSize: 10,
   // },
   active: {
-    backgroundColor: "blue",
+    backgroundColor: "#FFE34C",
     width: 43,
     height: 43,
-    borderRadius: "50%",
+    borderRadius: 50,
+  },
+  activeicon: {
+    color: "black",
   },
 });
 
