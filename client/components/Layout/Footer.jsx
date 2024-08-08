@@ -1,68 +1,64 @@
-import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
+import { View, TouchableOpacity, StyleSheet } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { useRoute } from "@react-navigation/native";
+import { useRoute, useNavigation } from "@react-navigation/native";
 
 const Footer = () => {
   const route = useRoute();
+  const navigation = useNavigation();
+
+  // Function to determine if the route is active
+  const isActive = (screenName) => route.name === screenName;
 
   return (
     <View style={styles.container}>
       <TouchableOpacity
-        style={[styles.menuContainer, route.name == "home" && styles.active]}
-        onPress={() => alert("Home")}
+        style={[styles.menuContainer, isActive("home") && styles.active]}
+        onPress={() => navigation.navigate("home")}
       >
         <Icon
           name="home-outline"
-          style={[styles.icon, route.name == "home" && styles.activeicon]}
+          style={[styles.icon, isActive("home") && styles.activeicon]}
         />
-        {/* <Text style={styles.iconText}>Home</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.menuContainer, route.name == "Cart" && styles.active]}
-        onPress={() => alert("Cart")}
+        style={[styles.menuContainer, isActive("cart") && styles.active]}
+        onPress={() => navigation.navigate("cart")}
       >
         <Icon
           name="cart-outline"
-          style={[styles.icon, route.name == "Cart" && styles.activeicon]}
+          style={[styles.icon, isActive("cart") && styles.activeicon]}
         />
-        {/* <Text style={styles.iconText}>Cart</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.menuContainer, route.name == "Account" && styles.active]}
+        style={[styles.menuContainer, isActive("Account") && styles.active]}
         onPress={() => alert("Account")}
       >
         <Icon
           name="account-circle-outline"
-          style={[styles.icon, route.name == "Account" && styles.activeicon]}
+          style={[styles.icon, isActive("Account") && styles.activeicon]}
         />
-        {/* <Text style={styles.iconText}>Account</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
         style={[
           styles.menuContainer,
-          route.name == "Notification" && styles.active,
+          isActive("Notification") && styles.active,
         ]}
         onPress={() => alert("Notification")}
       >
         <Icon
           name="bell-outline"
-          style={[
-            styles.icon,
-            route.name == "Notification" && styles.activeicon,
-          ]}
+          style={[styles.icon, isActive("Notification") && styles.activeicon]}
         />
-        {/* <Text style={styles.iconText}>Notification</Text> */}
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.menuContainer, route.name == "logout" && styles.active]}
+        style={[styles.menuContainer, isActive("logout") && styles.active]}
         onPress={() => alert("logout")}
       >
         <Icon
           name="logout"
-          style={[styles.icon, route.name == "logout" && styles.activeicon]}
+          style={[styles.icon, isActive("logout") && styles.activeicon]}
         />
-        {/* <Text style={styles.iconText}>Home</Text> */}
       </TouchableOpacity>
     </View>
   );
@@ -82,15 +78,13 @@ const styles = StyleSheet.create({
     fontSize: 28,
     color: "#ECECEC",
   },
-  // iconText: {
-  //   color: "#000000",
-  //   fontSize: 10,
-  // },
   active: {
     backgroundColor: "#FFE34C",
     width: 43,
     height: 43,
     borderRadius: 50,
+    alignItems: "center",
+    justifyContent: "center",
   },
   activeicon: {
     color: "black",

@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import React, { useEffect, useState } from "react";
 import { ProductsData } from "../Data/ProductsData";
+import CustomHeader from "../components/Layout/CustomHeader";
 
 const ProductDetails = ({ route, navigation }) => {
   const [pDetails, setPDetails] = useState({});
@@ -24,15 +25,7 @@ const ProductDetails = ({ route, navigation }) => {
     setPDetails(getProduct);
   }, [params?._id]);
 
-  useEffect(() => {
-    navigation.setOptions({
-      headerTitle: "Product Details",
-      headerStyle: {
-        backgroundColor: "#000",
-      },
-      headerTintColor: "#fff",
-    });
-  }, [navigation]);
+  
 
   const handleAddQty = () => {
     if (qty === 5) {
@@ -55,6 +48,7 @@ const ProductDetails = ({ route, navigation }) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
+      <CustomHeader title={"Product Details"}/>
       <ScrollView style={styles.scrollView}>
         <View style={styles.mainContainer}>
           <View style={styles.imageContainer}>

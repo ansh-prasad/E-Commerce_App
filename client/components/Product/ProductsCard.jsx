@@ -61,7 +61,6 @@ const styles = StyleSheet.create({
   },
   cardImg: {
     height: "100%",
-
     borderRadius: 18,
   },
   cardTitle: {
