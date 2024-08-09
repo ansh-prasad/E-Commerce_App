@@ -1,4 +1,4 @@
-import { View, Text, StatusBar , StyleSheet } from "react-native";
+import { View, Text, StatusBar, StyleSheet } from "react-native";
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
@@ -10,32 +10,25 @@ const Layout = ({ children }) => {
 
       <View>{children}</View>
       <View style={styles.footer}>
-
-      <Footer />
+        <Footer />
       </View>
     </>
   );
 };
 
 const styles = StyleSheet.create({
-  footer:{
-    display: "flex",
-    width: "100%",
-    flex: 1,
-    justifyContent: "flex-end",
-    zIndex: 100,
-    // borderWidth: 1,
-    // borderColor: "#232323",
+  footer: {
+    width: "90%",
+    justifyContent: "center",
+    alignSelf: "center", 
     position: "absolute",
     bottom: 0,
     padding: 10,
     backgroundColor: "#232323",
-    borderTopLeftRadius: 40,
-    borderTopRightRadius: 40,
-
-
-  }
-})
+    borderRadius: 50,
+    marginBottom: 5,
+  },
+});
 
 
 export default Layout;

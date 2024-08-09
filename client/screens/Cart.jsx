@@ -12,7 +12,7 @@ import Layout from "../components/Layout/Layout";
 import CartItem from "../components/cart/CartItem";
 import CustomHeader from "../components/Layout/CustomHeader";
 
-const Cart = () => {
+const Cart = ({navigation}) => {
   const [cartItems, setCartItems] = useState(CartData);
   return (
     <Layout>
@@ -51,7 +51,10 @@ const Cart = () => {
               </View>
             </View>
 
-            <TouchableOpacity style={styles.button}>
+            <TouchableOpacity
+              style={styles.button}
+              onPress={() => navigation.navigate("checkout")}
+            >
               <Text style={styles.buttonText}>Check Out</Text>
             </TouchableOpacity>
           </>
@@ -63,7 +66,7 @@ const Cart = () => {
 
 const styles = StyleSheet.create({
   scrollViewContainer: {
-    paddingBottom: 20, 
+    paddingBottom: 20,
   },
   heading: {
     marginLeft: "10%",
@@ -96,7 +99,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     marginHorizontal: "9%",
-    marginBottom: 140, 
+    marginBottom: 140,
   },
   buttonText: {
     color: "black",
