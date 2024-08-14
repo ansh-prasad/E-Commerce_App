@@ -7,6 +7,7 @@ import ProductDetails from "./screens/ProductDetails";
 import Cart from "./screens/Cart";
 import Checkout from "./screens/Checkout";
 import Payment from "./screens/Payment";
+import Login from "./screens/auth/Login";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
+      
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: "#000" },
@@ -23,6 +25,7 @@ export default function App() {
         <Stack.Screen name="productDetails" component={ProductDetails} />
         <Stack.Screen name="checkout" component={Checkout} />
         <Stack.Screen name="payment" component={Payment} />
+        <Stack.Screen name="login" component={Login} />
 
         <Stack.Screen name="cart" component={Cart} />
         <Stack.Screen name="about" component={About} />

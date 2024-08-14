@@ -67,7 +67,7 @@ const style = StyleSheet.create({
   },
   paymentcard: {
     backgroundColor: "#323232",
-    width: "80%",
+    width: "80%", 
     borderRadius: 20,
     padding: 30,
     marginVertical: 10,
