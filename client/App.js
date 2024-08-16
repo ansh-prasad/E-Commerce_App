@@ -15,10 +15,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-      
+        initialRouteName="login"
         screenOptions={{
           headerShown: false,
-          contentStyle: { backgroundColor: "#000" },
+          contentStyle: { backgroundColor: "#fff" },
         }}
       >
         <Stack.Screen name="home" component={Home} />

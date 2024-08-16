@@ -13,6 +13,7 @@
     "@mdi/react": "^1.6.1",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/native-stack": "^6.11.0",
+    "@types/react": "~18.2.79",
     "expo": "~51.0.24",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
@@ -21,7 +22,8 @@
     "react-native-screens": "^3.31.1",
     "react-native-svg": "^15.5.0",
     "react-native-vector-icons": "^10.1.0",
-    "react-native-x-carousel": "^1.0.1"
+    "react-native-x-carousel": "^1.0.1",
+    "typescript": "~5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
