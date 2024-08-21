@@ -14,6 +14,7 @@ const InputBox = ({
         style={styles.input}
         autoComplete={autoComplete}
         placeholder={placeholder}
+        placeholderTextColor="#fff"
         autoCorrect={false}
         secureTextEntry={secureTextEntry}
         value={value}
@@ -36,7 +37,9 @@ const styles = StyleSheet.create({
     height: 50,
     marginLeft: 40,
     borderRadius: 20,
-    color: "#fff"
+    color: "#fff",
+    textAlign: "left",
+    paddingLeft: 20, 
     
   },
 })
