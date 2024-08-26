@@ -6,10 +6,10 @@ import {
   ScrollView,
 } from "react-native";
 import React, { useState } from "react";
-import LoginIcon from "../../assets/svg/LoginIcon";
+import LoginIcon from "../../assets/svg/RegisterIcon";
 import InputBox from "../../components/Form/InputBox";
 
-const Login = ({ navigation }) => {
+const Register = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -31,6 +31,12 @@ const Login = ({ navigation }) => {
           setValue={setEmail}
         />
         <InputBox
+          placeholder={"Name"}
+          autoComplete={"name"}
+          value={email}
+          setValue={setEmail}
+        />
+        <InputBox
           placeholder={"Password"}
           secureTextEntry={true}
           value={password}
@@ -38,10 +44,10 @@ const Login = ({ navigation }) => {
         />
         <View style={styles.btncontainer}>
           <TouchableOpacity style={styles.loginbtn} onPress={handleLogin}>
-            <Text style={styles.logintext}>Login</Text>
+            <Text style={styles.logintext}>Register</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate("register")}>
-            <Text style={styles.text}>Create New Account</Text>
+          <TouchableOpacity onPress={() => navigation.navigate("login")}>
+            <Text style={styles.text}>Account</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -79,4 +85,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Login;
+export default Register;

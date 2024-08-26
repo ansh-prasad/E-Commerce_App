@@ -53,7 +53,9 @@ const Footer = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.menuContainer, isActive("logout") && styles.active]}
-        onPress={() => alert("logout")}
+        onPress={() => {
+          alert("Logout Seccessfully"), navigation.navigate("login");
+        }}
       >
         <Icon
           name="logout"
