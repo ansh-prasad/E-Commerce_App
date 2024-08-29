@@ -3,6 +3,7 @@ import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useRoute, useNavigation } from "@react-navigation/native";
 
+
 const Footer = () => {
   const route = useRoute();
   const navigation = useNavigation();
@@ -32,7 +33,7 @@ const Footer = () => {
       </TouchableOpacity>
       <TouchableOpacity
         style={[styles.menuContainer, isActive("Account") && styles.active]}
-        onPress={() => alert("Account")}
+        onPress={() => navigation.navigate("account")}
       >
         <Icon
           name="account-circle-outline"

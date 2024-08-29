@@ -9,6 +9,7 @@ import Checkout from "./screens/Checkout";
 import Payment from "./screens/Payment";
 import Login from "./screens/auth/Login";
 import Register from "./screens/auth/Register";
+import Account from "./screens/Account/Account";
 
 const Stack = createNativeStackNavigator();
 
@@ -28,6 +29,7 @@ export default function App() {
         <Stack.Screen name="payment" component={Payment} />
         <Stack.Screen name="login" component={Login} />
         <Stack.Screen name="register" component={Register} />
+        <Stack.Screen name="account" component={Account} />
 
         <Stack.Screen name="cart" component={Cart} />
         <Stack.Screen name="about" component={About} />
