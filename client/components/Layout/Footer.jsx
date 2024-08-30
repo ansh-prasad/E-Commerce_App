@@ -32,12 +32,12 @@ const Footer = () => {
         />
       </TouchableOpacity>
       <TouchableOpacity
-        style={[styles.menuContainer, isActive("Account") && styles.active]}
+        style={[styles.menuContainer, isActive("account") && styles.active]}
         onPress={() => navigation.navigate("account")}
       >
         <Icon
           name="account-circle-outline"
-          style={[styles.icon, isActive("Account") && styles.activeicon]}
+          style={[styles.icon, isActive("account") && styles.activeicon]}
         />
       </TouchableOpacity>
       <TouchableOpacity
