@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import { userData } from "../../Data/UserData";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-const Account = () => {
+const Account = ({navigation}) => {
   return (
     <>
       <CustomHeader title="Account" />
@@ -28,7 +28,7 @@ const Account = () => {
           </View>
 
           <View style={styles.details}>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("profile" , {id:userData._id})}>
               <Icon style={styles.btnI} name="account-edit" />
               <Text style={styles.btnT}>Edit Profile</Text>
             </TouchableOpacity>
@@ -40,7 +40,7 @@ const Account = () => {
             </TouchableOpacity>
           </View>
           <View style={styles.details}>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("notification")}>
               <Icon style={styles.btnI} name="bell-badge" />
               <Text style={styles.btnT}>Notification</Text>
             </TouchableOpacity>

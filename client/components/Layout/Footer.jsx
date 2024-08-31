@@ -3,7 +3,6 @@ import React from "react";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { useRoute, useNavigation } from "@react-navigation/native";
 
-
 const Footer = () => {
   const route = useRoute();
   const navigation = useNavigation();
@@ -34,7 +33,7 @@ const Footer = () => {
       <TouchableOpacity
         style={[styles.menuContainer, isActive("account") && styles.active]}
         onPress={() => navigation.navigate("account")}
-      >
+      >  
         <Icon
           name="account-circle-outline"
           style={[styles.icon, isActive("account") && styles.activeicon]}
@@ -43,13 +42,13 @@ const Footer = () => {
       <TouchableOpacity
         style={[
           styles.menuContainer,
-          isActive("Notification") && styles.active,
+          isActive("notification") && styles.active,
         ]}
-        onPress={() => alert("Notification")}
+        onPress={() => navigation.navigate("notification")}
       >
         <Icon
           name="bell-outline"
-          style={[styles.icon, isActive("Notification") && styles.activeicon]}
+          style={[styles.icon, isActive("notification") && styles.activeicon]}
         />
       </TouchableOpacity>
       <TouchableOpacity
