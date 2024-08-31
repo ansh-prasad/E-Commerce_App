@@ -1,8 +1,9 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import React from "react";
 import CustomHeader from "../../components/Layout/CustomHeader";
 import Layout from "../../components/Layout/Layout";
 import { userData } from "../../Data/UserData";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 const Account = () => {
   return (
@@ -18,9 +19,37 @@ const Account = () => {
               marginTop: 10,
             }}
           >
-            <Text style={styles.name}>HI {userData.name} 👋</Text>
+            <Text style={styles.name}>HI {userData.name}</Text>
             <Text style={styles.email}>{userData.email}</Text>
-            <Text style={styles.email}>{userData.contact}</Text>
+          </View>
+
+          <View style={styles.btncontainer}>
+            <Text style={styles.btnText}>Account Setting</Text>
+          </View>
+
+          <View style={styles.details}>
+            <TouchableOpacity style={styles.btn}>
+              <Icon style={styles.btnI} name="account-edit" />
+              <Text style={styles.btnT}>Edit Profile</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.details}>
+            <TouchableOpacity style={styles.btn}>
+              <Icon style={styles.btnI} name="store-search" />
+              <Text style={styles.btnT}>My Orders</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.details}>
+            <TouchableOpacity style={styles.btn}>
+              <Icon style={styles.btnI} name="bell-badge" />
+              <Text style={styles.btnT}>Notification</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.details}>
+            <TouchableOpacity style={styles.btn}>
+              <Icon style={styles.btnI} name="account-tie-hat" />
+              <Text style={styles.btnT}>Admin Panel</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </Layout>
@@ -42,8 +71,45 @@ const styles = StyleSheet.create({
     fontSize: 20,
   },
   email: {
-    color: "#ffffff",
+    color: "#CCCCCC",
+  },
+  btncontainer: {
+    padding: 10,
+    backgroundColor: "#FFE34C",
+    margin: 10,
+    marginVertical: 20,
+    marginHorizontal: 100,
+    borderRadius: 20,
+  },
+  btnText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  details: {
+    padding: 5,
+    backgroundColor: "#323232",
+    borderRadius: 30,
+    marginBottom: 20,
+    marginHorizontal: 80,
     
+    
+  },
+  btn: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginVertical: 10,
+    justifyContent:"center"
+  },
+  btnT: {
+    fontSize: 17,
+    marginRight: 10,
+    color: "white"
+  },
+  btnI: {
+    fontSize: 23,
+    marginRight: 10,
+    color: "white"
   },
 });
 
