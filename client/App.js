@@ -19,7 +19,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="notification"
+        initialRouteName="account"
         screenOptions={{
           headerShown: false,
           contentStyle: { backgroundColor: "#000" },
