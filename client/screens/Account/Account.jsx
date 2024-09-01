@@ -34,7 +34,7 @@ const Account = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View style={styles.details}>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("myorder")}>
               <Icon style={styles.btnI} name="store-search" />
               <Text style={styles.btnT}>My Orders</Text>
             </TouchableOpacity>
