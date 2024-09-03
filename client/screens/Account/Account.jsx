@@ -46,7 +46,7 @@ const Account = ({navigation}) => {
             </TouchableOpacity>
           </View>
           <View style={styles.details}>
-            <TouchableOpacity style={styles.btn}>
+            <TouchableOpacity style={styles.btn} onPress={() => navigation.navigate("admin" , {id:userData._id})}>
               <Icon style={styles.btnI} name="account-tie-hat" />
               <Text style={styles.btnT}>Admin Panel</Text>
             </TouchableOpacity>

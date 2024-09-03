@@ -21,9 +21,7 @@ const Orderitem = ({ order }) => {
           <Text style={styles.text2}>$ {order.totalAmount}</Text>
         </View>
       </View>
-      <View>
-        <Text style={styles.haddingt2}>Order Status</Text>
-      </View>
+     
       <View style={styles.container}>
         <View style={styles.info1}>
           <Text style={styles.text1}>Order Status</Text>
@@ -41,12 +39,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     marginTop: 20,
   },
-  haddingt2: {
-    color: "#fff",
-    fontSize: 20,
-    fontWeight: "800",
-    marginLeft: 20,
-  },
+  
   container: {
     backgroundColor: "#323232",
     margin: 20,
