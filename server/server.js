@@ -3,8 +3,12 @@ import colors from "colors";
 import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
+import connectDB from "./config/db.js";
 
 dotenv.config();
+
+//Data Nase Connection
+connectDB();
 
 const app = express();
 
