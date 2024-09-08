@@ -16,6 +16,11 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(cors());
 
+import testRoutes from "./routes/testRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+app.use("/api/v1", testRoutes);
+app.use("/api/v1/user", userRoutes);
+
 app.get("/", (req, res) => {
   return res.status(200).send("<h1>Welcomm To Node Server</h1>");
 });
