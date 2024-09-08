@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import bcrypt from "bcryptjs";
 
 const userSchema = new mongoose.Schema(
   {
@@ -40,7 +41,7 @@ const userSchema = new mongoose.Schema(
         type: String,
       },
     },
-    
+
     role: {
       type: String,
       default: "user",
@@ -48,6 +49,14 @@ const userSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+
+userSchema.pre("save", async function () {
+  this.password = await bcrypt.hash(this.password, 10);
+});
+
+userSchema.methods.comparePassword = async function (plainPassword) {
+  return await bcrypt.compare(plainPassword, this.password);
+};
 
 export const userMdoel = mongoose.model("Users", userSchema);
 export default userMdoel;

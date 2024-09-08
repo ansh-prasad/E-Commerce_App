@@ -2,8 +2,7 @@ import userModel from "../models/userModel.js";
 
 export const registerController = async (req, res) => {
   try {
-    const { name, email, password, address, city, country, phone } =
-      req.body;
+    const { name, email, password, address, city, country, phone } = req.body;
 
     if (
       !name ||
@@ -12,8 +11,7 @@ export const registerController = async (req, res) => {
       !city ||
       !address ||
       !country ||
-      !phone 
-      
+      !phone
     ) {
       return res.status(500).send({
         success: false,
@@ -28,7 +26,7 @@ export const registerController = async (req, res) => {
         message: "Email Already Taken",
       });
     }
-   
+
     const user = await userModel.create({
       name,
       email,
@@ -37,7 +35,6 @@ export const registerController = async (req, res) => {
       city,
       country,
       phone,
-      
     });
     res.status(201).send({
       success: true,
@@ -49,6 +46,50 @@ export const registerController = async (req, res) => {
     res.status(500).send({
       success: false,
       message: "Error In Register API",
+      error,
+    });
+  }
+};
+
+export const loginController = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    //validation
+    if (!email || !password) {
+      return res.status(500).send({
+        success: false,
+        message: "Please Add Email OR Password",
+      });
+    }
+
+    const user = await userModel.findOne({ email });
+    //user valdiation
+    if (!user) {
+      return res.status(404).send({
+        success: false,
+        message: "User Not Found",
+      });
+    }
+
+    const isMatch = await user.comparePassword(password);
+    //valdiation pass
+    if (!isMatch) {
+      return res.status(500).send({
+        success: false,
+        message: "Invalid Credentials",
+      });
+    }
+    res.status(200).send({
+      success: true,
+      message: "Login Successfully",
+
+      user,
+    });
+  } catch (error) {
+    console.log(error);
+    res.status(500).send({
+      success: "false",
+      message: "Error In Login Api",
       error,
     });
   }
