@@ -79,10 +79,13 @@ export const loginController = async (req, res) => {
         message: "Invalid Credentials",
       });
     }
+
+    const token = user.generateToken();
+
     res.status(200).send({
       success: true,
       message: "Login Successfully",
-
+      token,
       user,
     });
   } catch (error) {
